@@ -9,6 +9,8 @@ function fuzzyMatch(drivers, string) {
   return drivers.filter(function(driver){
     first = "${driver[0]} + ${driver[1]}"
     second = "${string[0]} + ${string[1]}"
-    return first == second;
+    if first == second {
+      return string;
+    }
   });
 };
